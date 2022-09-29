@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial scale=1.0" />
+    <title>Login Page </title>
+    <link rel="stylesheet" href="css/Login.css" >
+    <link rel="stylesheet" href="css/style.min.css" >
+    <link rel="stylesheet" href="css/materialize.min.css" >
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"
+  referrerpolicy="no-referrer" />
+  	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+</head>
+
+<body>
+    <body>
+        <div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </body>
+    <div class="container" id="container">
+    	<div class="form-container sign-up-container">
+        <h1 class="drop-shop animate-character" style="
+        margin-bottom: 70px;
+    ">DROPSHOP <i class="fa-solid fa-cart-shopping"></i></h1>
+              <h1 style="margin-bottom:30px">Create Account</h1>
+    		<form class="formValidate" id="formValidate" method="post" action="routers/register-router.php" novalidate="novalidate" class="col s12">
+         
+          <div class="input-field col s12">
+            <input name="username" id="username" type="text"  data-error=".errorTxt1">
+            <label for="username" class="center-align">Username</label>
+
+          </div>
+    			<div class="input-field col s12">
+            <i class="mdi-social-person prefix"></i>
+            <input name="name" id="name" type="text" data-error=".errorTxt2">
+            <label for="name" class="center-align">Name</label>
+
+            <div class="input-field col s12">
+              <i class="mdi-action-lock-outline prefix"></i>
+              <input name="password" id="password" type="password" data-error=".errorTxt3">
+              <label for="password">Password</label>
+    			<button>Sign Up</button>
+    		</form>
+    	</div>
+    	<div class="form-container sign-in-container">
+    		<form method="post" action="routers/router.php" class="login-form" id="form">
+          <h1 class="drop-shop animate-character" style="
+    margin-bottom: 30px;
+">DROPSHOP <i class="fa-solid fa-cart-shopping"></i></h1>
+<h1 sign-in="" style="margin-bottom: 50px;
+">Sign in</h1>
+
+
+    			<input type="email" placeholder="Email">
+    			<input type="password" placeholder="Password" />
+    			<a href="#">Forgot your password?</a>
+    			<button><a href="javascript:void(0);" onclick="document.getElementById('form').submit();">Sign In</a>
+          </button>
+        </form>
+    	</div>
+    	<div class="overlay-container">
+    		<div class="overlay">
+    			<div class="overlay-panel overlay-left">
+    				<h1>Welcome Back!</h1>
+    				<p>To keep connected with us please login with your personal details</p>
+            <p>
+               Use your College Registerd Email-Id
+            </p>
+    				<button class="ghost" id="signIn">Sign In</button>
+    			</div>
+    			<div class="overlay-panel overlay-right">
+    				<h1>Hi There!</h1>
+    				<p>Enter your personal details to open an account with us</p>
+    				<button class="ghost" id="signUp">Sign Up</button>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+ <!-- ================================================
+    Scripts
+    ================================================ -->
+
+  <!-- jQuery Library -->
+  <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
+  <!--materialize js-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <!--scrollbar-->
+  <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+      <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="js/plugins.min.js"></script>
+    <!--custom-script.js - Add your own theme custom JS-->
+    <script type="text/javascript" src="js/custom-script.js"></script>
+    <script src="script.js" charset="utf-8"></script>
+    <!-- jQuery Library -->
+  <script type="text/javascript" src="js/plugins/jquery-1.11.2.min.js"></script>
+  <!--materialize js-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <!--scrollbar-->
+  <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+     <script type="text/javascript" src="js/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery-validation/additional-methods.min.js"></script>
+     
+      <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+    <script type="text/javascript" src="js/plugins.min.js"></script>
+    <!--custom-script.js - Add your own theme custom JS-->
+    <script type="text/javascript" src="js/custom-script.js"></script>
+    <script type="text/javascript">
+    $("#formValidate").validate({
+        rules: {
+            username: {
+                required: true,
+                minlength: 5
+            },
+            name: {
+                required: true,
+                minlength: 5				
+            },
+			password: {
+				required: true,
+				minlength: 8
+			},
+            phone: {
+				required: true,
+				maxlength: 10
+			},
+        },
+        messages: {
+            username: {
+                required: "Enter username",
+                minlength: "Minimum 5 characters are required."
+            },
+            name: {
+                required: "Enter name",
+                minlength: "Minimum 5 characters are required."
+            },
+			password: {
+				required: "Enter password",
+				minlength: "Minimum 8 characters are required."
+			},
+            phone:{
+				required: "Specify contact number.",
+				minlength: "Minimum 10 characters are required."
+			},		
+        },
+        errorElement : 'div',
+        errorPlacement: function(error, element) {
+          var placement = $(element).data('error');
+          if (placement) {
+            $(placement).append(error)
+          } else {
+            error.insertAfter(element);
+          }
+        }
+     });
+    </script>
+</body>
+</html>
+
+
+    
+
